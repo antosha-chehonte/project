@@ -6,10 +6,14 @@
 
 {% block content %}
     <p>загружен следующий текст:</p>
-    {% for i in text %}
-        <p>{{ i.text }}</p>
-    {% endfor %}
+    <p>
+        Дата приказа:{{ text.date }}<br>
+        Номер:{{ text.number }}<br>
+        {{ text.text | safe }}
+    </p>
+    <p>количество записей: {{ count }}</p>
+
     <a href="">
-    <button type="submit">Загрузить еще</button>
+        <button type="submit">Загрузить еще</button>
     </a>
 {% endblock %}

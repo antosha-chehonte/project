@@ -14,15 +14,19 @@ def order(request):
 
         order_text = Order(text=result.value, date=date_now, number='номер приказа', title='название приказа')
         order_text.save()
-        text = Order.objects.all()
+        text = Order.objects.last()
+        count = Order.objects.all().count()
 
         context = {
             'text': text,
+            'count': count,
                     }
         return render(request, template_name="order/order_upload_success.html", context=context)
     else:
-        text = 'текста нет'
+        text = Order.objects.last()
+        count = Order.objects.all().count()
         context = {
             'text': text,
+            'count': count,
         }
         return render(request, template_name="order/order_upload.html", context=context)
