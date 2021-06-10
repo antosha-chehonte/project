@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+    <title>Внутренний сайт :: Загрузка приказов</title>
+{% endblock %}
+
+{% block content %}
+
+    <form action="/order/"
+          method="post"
+          enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="file" type="file"/>
+        <input type="submit"/>
+    </form>
+{% endblock %}
+

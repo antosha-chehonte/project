@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+    <title>Внутренний сайт :: Загрузка приказов</title>
+{% endblock %}
+
+{% block content %}
+    <p>загружен следующий текст:</p>
+    {% for i in text %}
+        <p>{{ i.text }}</p>
+    {% endfor %}
+    <a href="">
+    <button type="submit">Загрузить еще</button>
+    </a>
+{% endblock %}
