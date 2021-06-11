@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-
     <form action="/order/"
           method="post"
           enctype="multipart/form-data">
@@ -13,12 +12,5 @@
         <input name="file" type="file"/>
         <input type="submit"/>
     </form>
-    <p>количество записей: {{ count }}</p>
-    <p>последний текст:</p>
-    <p>
-        Дата приказа:{{ text.date }}<br>
-        Номер:{{ text.number }}<br>
-        {{ text.text | safe }}
-    </p>
 {% endblock %}
 

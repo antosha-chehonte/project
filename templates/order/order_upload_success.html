@@ -5,15 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <p>загружен следующий текст:</p>
-    <p>
-        Дата приказа:{{ text.date }}<br>
-        Номер:{{ text.number }}<br>
-        {{ text.text | safe }}
-    </p>
-    <p>количество записей: {{ count }}</p>
-
-    <a href="">
-        <button type="submit">Загрузить еще</button>
-    </a>
+    {% include 'include/order/result.html' %}
+{#    {{ table }}#}
+{#    {% for col in table %}#}
+{#        {{ col }}<br>#}
+{#    {% endfor %}#}
+{{ cel1 }}<br>
+    {{ cel2 }}
 {% endblock %}
